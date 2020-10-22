@@ -1,0 +1,5 @@
+a = input("Wprowadz liczbę a (a < b):")
+b = input("Wprowadz liczbe b:")
+Z = int(b) % int(a)
+mnozenie = Z * (Z+3)
+print(mnozenie)

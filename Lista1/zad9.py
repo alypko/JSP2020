@@ -1,0 +1,6 @@
+z = input("Wprowadz liczbe zespolona:")
+a = complex(z)
+abs(a)
+a.conjugate()
+print(a.conjugate())
+print(abs(a))
