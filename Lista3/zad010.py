@@ -1,0 +1,1 @@
+print([i for i in range(100, 400) if all([int(cyfra)%2==0 for cyfra in str(i)])])
