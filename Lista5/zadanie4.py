@@ -5,24 +5,30 @@ klucz={
     "o" : "a",
     "y" : "e"
 }
-print(list(klucz.keys()))
+
 def szyfr(x):
+    y=""
     k = list(klucz.keys())
     for charakter in x:
         if charakter in k:
-            x = x.replace(charakter, klucz[charakter])
-    return x
+            y+=klucz[charakter]
+        else:
+            y+=charakter
+        
+    return y
 
 def deszyfr(x):
+    y=""
     keys_values = klucz.items()
     odwortny_klucz = {value: key for key, value in keys_values}
     k=list(odwortny_klucz.keys())
-    print(odwortny_klucz)
     for charakter in x:
         if charakter in k:
-            x = x.replace(charakter, odwortny_klucz[charakter])
-    print(x)
+            y+=odwortny_klucz[charakter]
+        else:
+            y+=charakter
+    return y
 
 a = input("tekst: ")
 print(szyfr(a))  
-deszyfr(szyfr(a))
+print(deszyfr(szyfr(a)))
