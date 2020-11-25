@@ -21,6 +21,7 @@ def deszyfr(x):
     y=""
     keys_values = klucz.items()
     odwortny_klucz = {value: key for key, value in keys_values}
+    
     k=list(odwortny_klucz.keys())
     for charakter in x:
         if charakter in k:
