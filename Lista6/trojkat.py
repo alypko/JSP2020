@@ -10,10 +10,10 @@ def area(a, b, c):
 
 def sprawdz(a, b, c):
     
-        if(a==b or b==c or a==c):
-            print("Trojkat jest rownoramienny")
-        elif(a==b==c):
+        if(a==b==c):
             print("Trojkat jest rownoboczny")
+        elif(a==b or b==c or a==c):
+            print("Trojkat jest rownoramienny")
         else:
             print("trojkat roznoboczny")
     
