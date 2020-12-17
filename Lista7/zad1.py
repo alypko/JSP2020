@@ -1,6 +1,7 @@
 import time 
 
 def fib(n):
+    x1 = time.time()
     n1 = 0
     n2 = 1
     for i in range(1, n-1):
@@ -14,7 +15,8 @@ def fib(n):
         n1 = n2
         n2 = nast
         print(nast)
-    print("Czas dzialania iteracyjnie:", time.process_time())
+    x2 = time.time()
+    print("Czas dzialania iteracyjnie:", x2-x1)
 
 def fibRek(n):
     if(n==0):
@@ -30,7 +32,8 @@ def main():
     print("Wersja iteracyjnie:")
     fib(a)
     print("")
+    x1 = time.time()
     for i in range(a):
         print(fibRek(i))
-    print("Czas dzialania rekurencyjnie: ",time.process_time())
+    print("Czas dzialania rekurencyjnie: ",time.time()-x1)
 main()
