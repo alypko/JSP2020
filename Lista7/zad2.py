@@ -2,6 +2,7 @@ import random
 import time 
 
 def ins_sort(a):
+    x1 = time.time()
     n = len(a)
     for i in range(1, n):
         key = a[i]
@@ -10,10 +11,11 @@ def ins_sort(a):
             a[j+1] = a[j]
             j-=1
         a[j+1]=key
-    return a
+    x2= time.time()
+    print(a,x2-x1)
 
 
 
 l = [random.randint(0,20) for i in range(100)]
-print(ins_sort(l), time.process_time())
+ins_sort(l)
 
