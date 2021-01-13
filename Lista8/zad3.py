@@ -24,9 +24,16 @@ def generator():
                 dni = randint (1, 29)
         else: 
             dni = randint(1,28)
-    foo = str(randint(1000, 99999))
-    return str('%02d'%(rok%100)+'%02d'%miesiac + '%02d'%dni + foo)
+    foo = randint(1, 99999)
+    return str('%02d'%(rok%100)+'%02d'%miesiac + '%02d'%dni + '%05d'%foo)
 
 
-
-print(generator())
+pesele = [generator() for i in range(10)]
+try:
+    open("PESEL.txt", "w").write("")
+    for i in pesele:
+        NewFile = open("PESEL.txt", "a")
+        NewFile.write(i +"\n")
+except:
+    print("error")
+print("success!")

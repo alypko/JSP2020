@@ -1,0 +1,3 @@
+nr PESEL:2 4 3 2 1 0 9 6 3 8 2
+
+ data urodzenia:10-12-2024	plec: Kobieta
